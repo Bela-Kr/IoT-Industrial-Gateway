@@ -3,7 +3,7 @@
 ### 🚀 Project Overview
 A mock industrial monitoring system that simulates the **Edge-to-Cloud** data pipeline used in modern engineering.
 
-This project interfaces a low-level microcontroller (**Arduino**) acting as a sensor node with a linux-based Single Board Computer (**Raspberry Pi**) acting as an IoT Gateway. Data is processed at the edge and transmitted via **MQTT** telemetry.
+This project interfaces a low-level microcontroller (**Arduino**) acting as a sensor node with a linux-based Single Board Computer (**Raspberry Pi**) acting as an IoT Gateway. Data is processed at the edge and transmitted via **MQTT**.
 
 **Real-time data visualization using standard MQTT Mobile Clients.**
 
@@ -48,7 +48,7 @@ The circuit consists of a DHT11 temperature sensor and a status LED connected to
 
 <img src="assets/diagrams/wiring_iot_industrial_gateway.png">
 
-(designed with https://www.tinkercad.com/)
+(designed with https://www.tinkercad.com/, *note:* the sensor is not the DHT 11 used in the project, the standard temp. sensor represents it)
 
 
 **Wiring Pinout:**
