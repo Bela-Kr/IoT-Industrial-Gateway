@@ -1,0 +1,5 @@
+{
+    "board": "arduino:avr:mega",
+    "port": "/dev/tty.usbmodem1101",
+    "sketch": "arduino_edge/arduino_edge.ino"
+}
