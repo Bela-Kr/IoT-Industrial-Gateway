@@ -46,7 +46,12 @@ This project interfaces a low-level microcontroller (**Arduino**) acting as a se
 ### 🔌 Circuit Diagram
 The circuit consists of a DHT11 temperature sensor and a status LED connected to the Arduino Uno.
 
+| Arduino | Schematic |
+| :--- | :--- |
+| <img src="assets/diagrams/wiring_iot_industrial_gateway.png"> | <img src="assets/diagrams/IoT-Industrial-Gateway.pdf"> |
+
 <img src="assets/diagrams/wiring_iot_industrial_gateway.png">
+<img src="assets/diagrams/IoT-Industrial-Gateway.pdf">
 
 (designed with https://www.tinkercad.com/, *note:* the sensor is not the DHT 11 used in the project, the standard temp. sensor represents it)
 
