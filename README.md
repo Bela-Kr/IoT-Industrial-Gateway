@@ -3,7 +3,7 @@
 ### 🚀 Project Overview
 A mock industrial monitoring system that simulates the **Edge-to-Cloud** data pipeline used in modern engineering.
 
-This project interfaces a low-level microcontroller (**Arduino**) acting as a sensor node with a linux-based Single Board Computer (**Raspberry Pi**) acting as an IoT Gateway. Data is processed at the edge and transmitted via **MQTT** telemetry.
+This project interfaces a low-level microcontroller (**Arduino**) acting as a sensor node with a linux-based Single Board Computer (**Raspberry Pi**) acting as an IoT Gateway. Data is processed at the edge and transmitted via **MQTT**.
 
 **Real-time data visualization using standard MQTT Mobile Clients.**
 
