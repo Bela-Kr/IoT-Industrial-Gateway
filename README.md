@@ -1,9 +1,9 @@
 # Industrial IoT Gateway Prototype (Arduino + Raspberry Pi)
 
-### 🚀 Project Overview
-A mock industrial monitoring system that simulates the **Edge-to-Cloud** data pipeline used in modern engineering.
+### 1. Project Overview
+A mock industrial temperature and humidity monitoring system that simulates the **Edge-to-Cloud** data pipeline used in modern engineering.
 
-This project interfaces a low-level microcontroller (**Arduino**) acting as a sensor node with a linux-based Single Board Computer (**Raspberry Pi**) acting as an IoT Gateway. Data is processed at the edge and transmitted via **MQTT**.
+This project interfaces a low-level microcontroller (**Arduino**) acting as a sensor with a Single Board Computer (**Raspberry Pi**) acting as an IoT Gateway. Data is processed at the edge and transmitted via **MQTT**.
 
 **Real-time data visualization using standard MQTT Mobile Clients.**
 
@@ -12,7 +12,7 @@ This project interfaces a low-level microcontroller (**Arduino**) acting as a se
 | <img src="assets/screen_shots/mobile_phone_messages.PNG"> | <img src="assets/screen_shots/mobile_phone_connection.png"> |
 | *Monitoring Temp/Humidity in real-time* | *Secure TLS Connection to HiveMQ* |
 
-### 🏗 Architecture
+### 2. Architecture
 **[Edge Device]** --> **[Python Gateway]** --> **[Cloud]** --> **[(Mobile) Client]**
 
 1.  **Edge Node (Arduino Uno):**
@@ -22,28 +22,26 @@ This project interfaces a low-level microcontroller (**Arduino**) acting as a se
 2.  **Python Gateway (Raspberry Pi 4):**
     *   Listens to Serial/USB interface.
     *   Parses incoming JSON packets.
-    *   Transmits data to the Cloud/Broker via MQTT.
+    *   Transmits data to the Cloud via MQTT.
 3.  **Communication**
     *   Serial (USB): JSON encoded data.
     *   MQTT (WIFI): Secure TLS connection to HiveMQ Cloud.
 
-### 🚀 Features:
-*   **Real-time Data Parsing:** deserializes incoming JSON streams from serial ports.
+### 3. Features:
+*   **Real-Time Data Desrialization:** desrializes the incoming JSON data for further processing in real time
 
-*   **Fault Tolerance:** Handles serial disconnections and non-JSON data gracefully without crashing.
+*   **Fault Tolerance:** Handles serial disconnections and non-JSON data without crashing.
 
-*   **Security:** Uses environment variables (.env) for credentials and TLS/SSL for cloud transport.
-
-*   **Asynchronous Networking:** Uses Paho-MQTT background loops for non-blocking communication.
+*   **Security:** Uses environment variables (.env) for credentials and TLS for cloud transport.
 
 
-### 🛠 Tech Stack
+### 4. Tech Stack
 *   **Hardware:** Arduino Uno, Raspberry Pi 4, DHT Sensor.
 *   **Embedded:** C++ (Arduino Framework).
 *   **Gateway:** Python 3, PySerial, Paho-MQTT.
 *   **Protocols:** UART (Serial), MQTT, JSON.
 
-### 🔌 Circuit Diagram
+### 5. Circuit Diagram
 The circuit consists of a DHT11 temperature sensor and a status LED connected to the Arduino Uno.
 
 **1. Wiring Diagram**
@@ -63,7 +61,7 @@ The circuit consists of a DHT11 temperature sensor and a status LED connected to
 | **VCC** | 5V |
 | **GND** | GND |
 
-### ⚙️ How to Run
+### 6. How to Run
 **1. The Edge Node**
 Flash the `arduino_edge/sensor_node.ino` to the Arduino Board.
 
@@ -74,6 +72,6 @@ Install dependencies on the Raspberry Pi:
 Run the gateway script:
 `python3 pi_gateway/gateway.py`
 
-### 🔮 Future Improvements
+### 7. Future Improvements
 *   Add a local SQLite database on the Pi for offline data buffering.
 *   Integrate Docker to containerize the Gateway script.
